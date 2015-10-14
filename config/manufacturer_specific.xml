@@ -49,7 +49,7 @@
 		<Product type="0002" id="0009" name="Home Energy Meter" config="aeotec/hem.xml"/>
 		<Product type="0002" id="001c" name="Home Energy Meter G2" config="aeotec/hemg2.xml"/>
 		<Product type="0002" id="001d" name="Door/Window Sensor" config="aeotec/doorwindow.xml"/>
-		<Product type="0002" id="002d" name="Water Sensor" config="aeotec/watersensor.xml" />
+		<Product type="0002" id="002d" name="Water Sensor" config="aeotec/watersensor.xml"/>
 		<Product type="0002" id="0036" name="Recessed Door Sensor" config="aeotec/recessed_doorsensor.xml"/>
 		<Product type="0002" id="004a" name="Multi Sensor Gen5" config="aeotec/multisensor_gen5.xml"/>
 		<Product type="0002" id="0059" name="Recessed Door Sensor" config="aeotec/recessed_doorsensor_gen5.xml"/>
