@@ -247,6 +247,9 @@
 	<Manufacturer id="014d" name="Enblink">
                 <Product type="0001" id="0001" name="SS201-US-W Z-Wave Controller"/>
 	</Manufacturer>
+	<Manufacturer id="011a" name="Enerwave">
+	  <Product type="0801" id="0b03" name="ZWN-SC7 7-Button Scene Controller"/>
+  </Manufacturer>
 	<Manufacturer id="0113" name="Evolve Guest Controls">
 		<Product type="4457" id="3034" name="LRM-AS Wall Dimmer 500W" config="evolve/lrm-as.xml"/>
                 <Product type="5246" id="3133" name="LFM-20 Fixture Module"/>
@@ -577,7 +580,7 @@
 		<Product type="0001" id="8380" name="ZRC-100"/>
 		<Product type="0101" id="8371" name="ZXT-310EU"/>
 		<Product type="0101" id="8377" name="ZXT-120" config="remotec/zxt-120.xml"/>
-    <Product type="0200" id="8031" name="ZTS-110" config="remotec/zts-110.xml"/>
+		<Product type="0200" id="8031" name="ZTS-110" config="remotec/zts-110.xml"/>
 		<Product type="8201" id="8120" name="ZFM-X10EU Dual Mode Insert Module "/>
 		<Product type="8000" id="0002" name="ZFM-80" config="remotec/zfm-80.xml"/>
   </Manufacturer>
