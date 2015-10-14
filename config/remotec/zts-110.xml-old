@@ -3,22 +3,30 @@
 <Product xmlns='http://code.google.com/p/open-zwave/'>
 <!-- Configuration Parameters -->
 <CommandClass id="112">
-     <Value type="int" index="1" genre="config" label="Swing" units="" min="1" max="4" value="1">
+     <Value type="list" index="1" genre="config" label="Swing" units="" min="1" max="4" value="1" size="1">
             <Help>
               Swing is the difference between target temperature and actual room temperature before the heat or cool will turn on. It allows you to control how often your heat will turn on depending on the amount of temperature fluctuation you want to allow. The higher the swing value, the longer it will take for the system to turn on and the wider the range of actual temperature will be. For example: with a cooling setpoint of 72°F and a swing value of 1°F, the air conditioning to turn on at 73°F and off at 71°F.
             </Help>
+            <Item label="1°F / 0.5°C" value="1" />
+            <Item label="2°F / 1.0°C" value="2" />
+            <Item label="3°F / 1.5°C" value="3" />
+            <Item label="4°F / 2.0°C" value="4" />
       </Value>
-     <Value type="int" index="2" genre="config" label="Differential" units="" min="1" max="4" value="2">
+     <Value type="list" index="2" genre="config" label="Differential" units="" min="1" max="4" value="2" size="1">
             <Help>
               Differential is the difference between actual room temperature and target room temperature where second stage heating will turn on in a furnace with multiple stages.
             </Help>
+            <Item label="1°F / 0.5°C" value="1" />
+            <Item label="2°F / 1.0°C" value="2" />
+            <Item label="3°F / 1.5°C" value="3" />
+            <Item label="4°F / 2.0°C" value="4" />
       </Value>
-     <Value type="int" index="3" genre="config" label="Set Filter Counter" units="" min="500" max="4000" value="500">
+     <Value type="int" index="3" genre="config" label="Set Filter Counter" units="" min="500" max="4000" value="500" size="2">
             <Help>
               Set filter replacement timer from 500 to 4000 hours.
             </Help>
       </Value>
-     <Value type="int" index="4" genre="config" label="Report Filter Counter" read_only="true" units="" min="0" max="9999">
+     <Value type="int" index="4" genre="config" label="Report Filter Counter" read_only="true" units="" min="0" max="9999" size="2">
             <Help>
               Read data on replacement timer from 500 to 4000 hours.
             </Help>
@@ -30,7 +38,7 @@
             <Item label="Celsius" value="0" />
             <Item label="Fahrenheit" value="1" />
       </Value>
-     <Value type="int" index="6" genre="config" label="Setpoint Upper Limit" units="" min="7" max="99" value="99">
+     <Value type="int" index="6" genre="config" label="Setpoint Upper Limit" units="" min="7" max="99" value="99" size="1">
             <Help>
               Setpoint Upper Limit = A
               Setpoint Lower Limit = B
@@ -38,7 +46,7 @@
               If temperature scale has been set to Fahrenheit, acceptable values for A range from: (B+4) (°F) to 99 (°F)
             </Help>
       </Value>
-     <Value type="int" index="7" genre="config" label="Setpoint Lower Limit" units="" min="5" max="95" value="41">
+     <Value type="int" index="7" genre="config" label="Setpoint Lower Limit" units="" min="5" max="95" value="41" size="1">
             <Help>
               If temperature scale has been set to Celsius, acceptable values range from 5 (°C) to 35 (°C)
               If temperature scale has been set to Fahrenheit, acceptable values range from 41 (°F) to 95 (°F)
@@ -59,25 +67,71 @@
             <Item label="24 Hour Notation" value="0" />
             <Item label="12 Hour Notation" value="1" />
      </Value>
-     <Value type="int" index="10" genre="config" label="Repeat Basic Set Counter" units="" min="0" max="255" value="0">
+     <Value type="int" index="10" genre="config" label="Repeat Basic Set Counter" units="" min="0" max="255" value="0" size="1">
             <Help>
             Thermostat sends "Basic Set" command to its association node repeatedly ever X minutes. 0 = Disabled or Set to Enabled Values available 3 to 255.
             </Help>
      </Value>
-     <Value type="int" index="11" genre="config" label="Auto Reporting Trigger" units="" min="0" max="8" value="1">
+     <Value type="list" index="11" genre="config" label="Auto Reporting Trigger" units="" min="0" max="8" value="1" size="1">
             <Help>
             Automatic reporting is triggered if a new temperature reading is different from previous value by the amount selected here.
             </Help>
+            <Item label="Disabled" value="0" />
+            <Item label="1°F / 0.5°C" value="1" />
+            <Item label="2°F / 1°C" value="2" />
+            <Item label="3°F / 1.5°C" value="3" />
+            <Item label="4°F / 2°C" value="4" />
+            <Item label="5°F / 2.5°C" value="5" />
+            <Item label="6°F / 3°C" value="6" />
+            <Item label="7°F / 3.5°C" value="7" />
      </Value>
-     <Value type="int" index="12" genre="config" label="Timed Auto Reporting Interval" units="" min="0" max="16" value="1">
+     <Value type="list" index="12" genre="config" label="Timed Auto Reporting Interval" units="" min="0" max="16" value="1" size="1">
             <Help>
              Controls how often the thermostat will auto report current room temperature
             </Help>
+            <Item label="Disabled" value="0" />
+            <Item label="30 Minutes" value="1" />
+            <Item label="1 Hour" value="2" />
+            <Item label="1.5 Hours" value="3" />
+            <Item label="2 Hours" value="4" />
+            <Item label="2.5 Hours" value="5" />
+            <Item label="3 Hours" value="6" />
+            <Item label="3.5 Hours" value="7" />
+            <Item label="4 Hours" value="8" />
+            <Item label="4.5 Hours" value="9" />
+            <Item label="5 Hours" value="10" />
+            <Item label="5.5 Hours" value="11" />
+            <Item label="6 Hours" value="12" />
+            <Item label="6.5 Hours" value="13" />
+            <Item label="7 Hours" value="14" />
+            <Item label="7.5 Hours" value="15" />
+            <Item label="8 Hours" value="16" />
      </Value>
-     <Value type="int" index="13" genre="config" label="Temperature Sensor Calibration" units="" min="-10" max="10" value="0">
+     <Value type="list" index="13" genre="config" label="Temperature Sensor Calibration" units="" min="-10" max="10" value="0" size="1">
             <Help>
             Sensor temperature calibration. (This parameter is used to change the display temperature to match with your previous thermostat, or to match another thermostat already installed. Formula: Display Temperature = Sensor Reading Values + Offset Value
             </Help>
+            <Item label="No Offset Correction" value="0" />
+            <Item label="+1°F / +0.5°C" value="1" />
+            <Item label="+2°F / +1°C" value="2" />
+            <Item label="+3°F / +1.5°C" value="3" />
+            <Item label="+4°F / +2°C" value="4" />
+            <Item label="+5°F / +2.5°C" value="5" />
+            <Item label="+6°F / +3°C" value="6" />
+            <Item label="+7°F / +3.5°C" value="7" />
+            <Item label="+8°F / +4°C" value="8" />
+            <Item label="+9°F / +4.5°C" value="9" />
+            <Item label="+10°F / +5°C" value="10" />
+            <Item label="-1°F / -0.5°C" value="-1" />
+            <Item label="-2°F / -1°C" value="-2" />
+            <Item label="-3°F / -1.5°C" value="-3" />
+            <Item label="-4°F / -2°C" value="-4" />
+            <Item label="-5°F / -2.5°C" value="-5" />
+            <Item label="-6°F / -3°C" value="-6" />
+            <Item label="-7°F / -3.5°C" value="-7" />
+            <Item label="-8°F / -4°C" value="-8" />
+            <Item label="-9°F / -4.5°C" value="-9" />
+            <Item label="-10°F / -5°C" value="-10" />
      </Value>
 </CommandClass>
 <!-- Association Groups -->
