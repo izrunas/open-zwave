@@ -3,12 +3,12 @@
 <Product xmlns='http://code.google.com/p/open-zwave/'>
 <!-- Configuration Parameters -->
 <CommandClass id="112">
-     <Value type="int" index="1" genre="config" label="Swing" units="" min="1" max="4" value="1">
+     <Value type="int" index="1" genre="config" label="Swing" units="" min="1" max="4" value="1" size="1">
             <Help>
               Swing is the difference between target temperature and actual room temperature before the heat or cool will turn on. It allows you to control how often your heat will turn on depending on the amount of temperature fluctuation you want to allow. The higher the swing value, the longer it will take for the system to turn on and the wider the range of actual temperature will be. For example: with a cooling setpoint of 72°F and a swing value of 1°F, the air conditioning to turn on at 73°F and off at 71°F.
             </Help>
       </Value>
-     <Value type="int" index="2" genre="config" label="Differential" units="" min="1" max="4" value="2">
+ <!--    <Value type="int" index="2" genre="config" label="Differential" units="" min="1" max="4" value="2">
             <Help>
               Differential is the difference between actual room temperature and target room temperature where second stage heating will turn on in a furnace with multiple stages.
             </Help>
@@ -78,7 +78,7 @@
             <Help>
             Sensor temperature calibration. (This parameter is used to change the display temperature to match with your previous thermostat, or to match another thermostat already installed. Formula: Display Temperature = Sensor Reading Values + Offset Value
             </Help>
-     </Value>
+     </Value> -->
 </CommandClass>
 <!-- Association Groups -->
 <CommandClass id="133">
